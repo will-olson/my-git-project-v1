@@ -211,3 +211,11 @@ body:not(.home) .image-gallery img {
     width: 100%;
     object-fit: cover; /* Ensure images are contained within the set dimensions */
 }
+
+/* Ensure consistent image sizing across all pages */
+.image-gallery img {
+    max-width: 200px; /* Standardized small tile size */
+    max-height: 200px; /* Standardized small tile size */
+    width: 100%;
+    object-fit: cover; /* Ensure images are contained within the set dimensions */
+}
