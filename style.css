@@ -19,6 +19,10 @@
     --background-color: #fff;
     --highlight-color: #f00;
     --link-color: #00f;
+    --nav-background-color: #4B0082; /* Deep Purple */
+    --nav-text-color: #40E0D0; /* Teal */
+    --nav-button-background: #4B0082; /* Deep Purple */
+    --nav-button-border: #40E0D0; /* Teal */
 }
 
 html, body {
@@ -48,31 +52,52 @@ header h1 {
 }
 
 nav {
-    margin-top: 2rem;
+    background-color: var(--nav-background-color);
+    text-align: center;
+    padding: 0.5rem 0;
+    position: fixed;
+    width: 100%;
+    top: 4rem; /* Adjust based on header height */
+    z-index: 900;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
-    text-align: center;
+    margin: 0;
+    display: flex;
+    justify-content: center;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 1rem;
+    margin: 0 0.5rem;
 }
 
 nav ul li a {
-    color: var(--link-color);
+    color: var(--nav-text-color);
     text-decoration: none;
+    font-size: 1rem; /* Adjust font size if needed */
+    text-transform: uppercase;
+    padding: 0.5rem 1rem;
+    display: inline-block;
+    background-color: var(--nav-button-background);
+    border: 2px solid var(--nav-button-border);
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:before, nav ul li a:after {
+    content: '"';
+    color: var(--nav-text-color);
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
+    background-color: var(--nav-text-color);
+    color: var(--nav-background-color);
 }
 
 main {
-    padding: 5rem 1rem 1rem;
+    padding: 7rem 1rem 1rem; /* Adjust padding to account for fixed header and nav */
     max-width: 800px;
     margin: 0 auto;
 }
@@ -116,13 +141,43 @@ footer p {
     font-size: 0.8rem;
 }
 
+.audio-player {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background-color: var(--background-color);
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px 0 0 8px;
+    box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+audio {
+    display: block;
+    margin-bottom: 10px;
+}
+
 @media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
     nav ul li {
-        display: block;
         margin: 0.5rem 0;
     }
 
     .image-gallery {
         justify-content: center;
+    }
+
+    .audio-player {
+        right: 10px;
+        padding: 0.5rem;
+    }
+
+    audio {
+        width: 100%;
     }
 }
