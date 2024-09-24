@@ -201,3 +201,13 @@ footer p {
 
     .audio-player {
         right: 10px;
+        padding: 0.5rem;
+    }
+
+    .audio-controls audio {
+        width: 100%;
+    }
+}
+
+/* Hide Navigation Bar on Standalone Pages */
+body:not(.home)
