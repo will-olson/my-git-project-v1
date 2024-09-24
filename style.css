@@ -25,6 +25,7 @@
     --nav-button-border: #40E0D0; /* Teal */
     --audio-player-background: #4B0082; /* Deep Purple */
     --audio-player-border: #40E0D0; /* Teal */
+    --audio-player-light-bg: #9370DB; /* Light Purple */
 }
 
 html, body {
@@ -114,6 +115,18 @@ section h2 {
     margin-bottom: 1rem;
 }
 
+.section-header {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    padding: 0.5rem 1rem;
+    background-color: var(--nav-button-background);
+    color: var(--nav-text-color);
+    border: 2px solid var(--nav-button-border);
+    border-radius: 4px;
+    text-align: center;
+    margin: 2rem 0 1rem;
+}
+
 section p {
     margin-bottom: 1rem;
 }
@@ -154,11 +167,23 @@ footer p {
     border-radius: 8px 0 0 8px;
     box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.1);
     z-index: 1000;
+    width: 250px;
 }
 
-audio {
+.audio-controls audio {
     display: block;
+    width: 100%;
     margin-bottom: 10px;
+    background-color: var(--audio-player-light-bg);
+    border-radius: 4px;
+}
+
+.audio-visualizer {
+    height: 50px;
+    background-color: var(--audio-player-light-bg);
+    border-radius: 4px;
+    margin-top: 10px;
+    /* Placeholder for audio visualizer */
 }
 
 @media (max-width: 768px) {
@@ -176,20 +201,3 @@ audio {
 
     .audio-player {
         right: 10px;
-        padding: 0.5rem;
-    }
-
-    audio {
-        width: 100%;
-    }
-}
-
-/* Hide Navigation Bar on Standalone Pages */
-body:not(.home) nav {
-    display: none;
-}
-
-/* Make Images Smaller on Standalone Pages */
-body:not(.home) .image-gallery img {
-    max-width: 100px; /* Adjust as needed */
-}
