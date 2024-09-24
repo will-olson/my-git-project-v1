@@ -1,12 +1,128 @@
-body {
-    font-family: "Comic Sans MS", "Comic Sans", cursive;
-    background-color: #f0f0f0; /* Light background color */
-    margin: 0;
-    padding: 0;
-    text-align: center; /* Center-align text for demonstration */
+/* Theme: Canary---yellow trojanhorse */
+
+/* Importing Fonts */
+@font-face {
+    font-family: 'courier-prime';
+    src: url('../assets/fonts/courier-prime.regular.woff') format('woff'),
+         url('../assets/fonts/courier-prime.regular.ttf') format('truetype'),
+         url('../assets/fonts/courier-prime.regular.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
-h1 {
-    color: #333;
-    margin-top: 50px;
+:root {
+    --main-fontsize: 1rem;
+    --main-lineheight: 1.5;
+    --size-sectiontitle: 2rem;
+    --lineh-sectiontitle: 1.2;
+    --primary-color: #000;
+    --background-color: #fff;
+    --highlight-color: #f00;
+    --link-color: #00f;
+}
+
+html, body {
+    font-family: 'courier-prime', sans-serif;
+    font-size: var(--main-fontsize);
+    line-height: var(--main-lineheight);
+    color: var(--primary-color);
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: var(--background-color);
+    padding: 1rem;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #ccc;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+nav {
+    margin-top: 2rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 5rem 1rem 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+section h2 {
+    font-size: var(--size-sectiontitle);
+    line-height: var(--lineh-sectiontitle);
+    margin-bottom: 1rem;
+}
+
+section p {
+    margin-bottom: 1rem;
+}
+
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.image-gallery img {
+    width: 100%;
+    max-width: 200px;
+    border: 2px solid var(--link-color);
+    border-radius: 8px;
+}
+
+footer {
+    background-color: var(--background-color);
+    padding: 1rem;
+    text-align: center;
+    border-top: 1px solid #ccc;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.8rem;
+}
+
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 0.5rem 0;
+    }
+
+    .image-gallery {
+        justify-content: center;
+    }
 }
