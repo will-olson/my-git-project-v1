@@ -219,3 +219,32 @@ body:not(.home) .image-gallery img {
     width: 100%;
     object-fit: cover; /* Ensure images are contained within the set dimensions */
 }
+
+/* Floating Back to Home Footer */
+.floating-footer {
+    background-color: var(--nav-background-color);
+    color: var(--nav-text-color);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    border-top: 2px solid var(--nav-button-border);
+}
+
+.floating-footer a {
+    color: var(--nav-text-color);
+    text-decoration: none;
+    font-size: 1rem;
+    text-transform: uppercase;
+    padding: 0.5rem 1rem;
+    background-color: var(--nav-button-background);
+    border: 2px solid var(--nav-button-border);
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.floating-footer a:hover {
+    background-color: var(--nav-text-color);
+    color: var(--nav-background-color);
+}
