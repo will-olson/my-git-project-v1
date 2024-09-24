@@ -1,0 +1,20 @@
+{
+  "name": "my-git-project-v1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+  "mocha": "^9.0.0",
+  "chai": "^4.3.4",
+  "jsdom": "^16.6.0"
+ }
+}
