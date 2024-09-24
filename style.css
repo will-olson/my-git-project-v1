@@ -139,7 +139,9 @@ section p {
 
 .image-gallery img {
     width: 100%;
-    max-width: 200px;
+    max-width: 200px; /* Standardized small tile size */
+    max-height: 200px; /* Standardized small tile size */
+    object-fit: cover; /* Ensure images are contained within the set dimensions */
     border: 2px solid var(--link-color);
     border-radius: 8px;
 }
@@ -178,14 +180,6 @@ footer p {
     border-radius: 4px;
 }
 
-.audio-visualizer {
-    height: 50px;
-    background-color: var(--audio-player-light-bg);
-    border-radius: 4px;
-    margin-top: 10px;
-    /* Placeholder for audio visualizer */
-}
-
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
@@ -210,4 +204,14 @@ footer p {
 }
 
 /* Hide Navigation Bar on Standalone Pages */
-body:not(.home)
+body:not(.home) nav {
+    display: none;
+}
+
+/* Make Images Smaller on Standalone Pages */
+body:not(.home) .image-gallery img {
+    max-width: 200px; /* Standardized small tile size */
+    max-height: 200px; /* Standardized small tile size */
+    width: 100%;
+    object-fit: cover; /* Ensure images are contained within the set dimensions */
+}
