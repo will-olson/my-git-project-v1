@@ -1,4 +1,12 @@
-<head>
-  <link rel="stylesheet" href="style.css" />
-  <title>My Personal Website</title>
-</head>
+body {
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    background-color: #f0f0f0; /* Light background color */
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Center-align text for demonstration */
+}
+
+h1 {
+    color: #333;
+    margin-top: 50px;
+}
