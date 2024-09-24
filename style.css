@@ -89,11 +89,6 @@ nav ul li a {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-nav ul li a:before, nav ul li a:after {
-    content: '"';
-    color: var(--nav-text-color);
-}
-
 nav ul li a:hover {
     background-color: var(--nav-text-color);
     color: var(--nav-background-color);
@@ -178,6 +173,7 @@ footer p {
     margin-bottom: 10px;
     background-color: var(--audio-player-light-bg);
     border-radius: 4px;
+    border: 2px solid var(--audio-player-border); /* Teal outline for consistency */
 }
 
 @media (max-width: 768px) {
